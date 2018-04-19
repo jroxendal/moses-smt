@@ -1,3 +1,17 @@
+# This fork
+Uses my fork of moses instead of the official. For use with Uppsala University
+ pretrained models for Swedish modernization.
+
+## Use this fork
+```
+  cd base
+  docker build -t moses-smt .
+  # test run on example txt
+  docker run -v /host_path/to/model_files/:/opt/bin/swedish_models -t moses-smt bin/moses -v 0 -f /opt/bin/swedish_models/moses-swedish.ini -i /opt/bin/swedish_models/examplefile-swedish.txt
+```
+Remember to modify the .ini file to use the /opt/bin paths as well. 
+
+
 # Dock You a Moses
 
 Want to play with the [Moses](http://www.statmt.org/moses/) Statistical Machine
